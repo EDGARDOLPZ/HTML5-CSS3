@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        div {color:brown;}/*Deixa o texto em marrom */
+        div > p{display: none;/*Oculta o texto contido na tag <p> dentro da tag <div> */
+            background-color: blue;}/*Muda a cor de fundo do texto contido na tag <p> dentro da   
+                                        tag <div> */
+        div > h2{display: none;display:none;/*Oculta o texto contido na tag <h2> dentro da tag <div> */
+            background-color: blue;}/*Muda a cor de fundo do texto contido na tag <h2> dentro da 
+                                      <div> */
+        div:hover{color:white;font-size: 0px;} /*Quando o mouse passar por cima do texto da tag 
+                                                  <div> a cor da letra irá mudar para branca e o tamanho para 0 zero*/
+        div:hover >p{display: inline;color:white;font-size: x-large;}/*Quando o mouse passar por 
+                                                                       cima do texto da tag <div> a cor da letra irá mudar para  o tamanho da fonte para grande e o alinhamento do texto deverá ser mostrado alinhado em linha*/
+        div:hover >h2{display: inline;color:rgb(196, 175, 175); font-size:x-large;} /*Quando o mouse passar por 
+                                                                       cima do texto da tag <div> a cor da letra irá mudar para  o tamanho da fonte para grande e o alinhamento do texto deverá ser mostrado alinhado em linha*/
+          
+    </style>
+
+
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>Passe o mouse aqui
+        <p>Este texto está escondido</p>
+        <h2>Título h2</h2>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+/*
+Paletas de cores que devem ser usadas no site:
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+
+/*O espaço chamado root nas CSS é o lugar onde podem ser criadas as variaveis que serão utilizadas na CSS deste projeto*/
+
+:root{
+    --cor0:#c5ebd6 ;
+    --cor1:#83e1ad ;
+    --cor2:#3ddc84 ;
+    --cor3:#2fa866 ;
+    --cor4:#1a5c37 ;
+    --cor5:#063d1e ;
+    --cor6:white;
+
+    /*Abaixo foram criadas as variáveis de fontes que serão usadas no projeto*/
+    /*Obs.: A sequencia de fontes que o browser exibirá conforme compatibilidade
+    Ou seja caso o browser não trabalhe com a fonte Arial tentará exibir a Verdana e assim por diante*/
+    --fonte-padrao: Arial,Verdana,Helvetica,sans-serif;
+    --fonte-idroid: 'idroid', cursive;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    /*A fonte Cursive é uma fonte padrão que todos os browser utilizam*/
+
+/*Este comando faz com que todas as telas fiquem encontadas na beirada sem mostrar as bordas*/
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Este comando serve para indicar as CSS que será utilizada uma fonte interna baixada da internet*/
+@font-face{
+    font-family:'idroid';
+    /*Determinar o nome da fonte que está sendo criada*/
+    src:url('fontes/idroid.otf') format('opentype');
+    /*O campo url indica onde está o arquivo com o tipo da fonte*/
+    /*O campo format indica na CSS qual é a extensão da fonte otf ou ttf*/
+    /*Para finalizar deve ser indicado na tag que desejamos a fonte idroid entre haspas simples*/
+    font-weight: normal;
+    /*O tamanho da fonte criada no font-face, será NORMAL*/
+}
+
+/* Cores em degradee no cabeçalho das páginas*/
+header{
+    background-image: linear-gradient(to top, var(--cor5),rgb(61, 240, 37));
+    color: var(--cor6);
+    margin:0px;
+    margin-top:-40px;
+    min-height: 150px;/*Este comando espeficica a altura do cabeçalho*/
+    /*box-shadow:10px 10px 20px black;Este comando cria sombreamento na caixa do header*/
+    
+}
+
+header p {
+    text-align:center;
+ 
+}
+
+
+nav{
+    color:var(--cor6);
+    text-align:left;
+    margin-left:10px;/*Deslocar os parágrafos um pouco para a direita*/
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: bold;/*Fonte em negrito*/
+    
+    
+}
+
+header nav a{
+   color:white;
+   text-decoration: none;
+   padding-right: 20px;
+   transition-duration: 0s;/*É o tempo que irá durar para que a cor dos links sofra toda a mudança da cor da fonte*/
+}
+
+a:hover{ color:orangered}
+
+body{
+   
+   font-family: var(--fonte-padrao);
+   margin: auto;
+   max-width: 1000px;
+   min-width: 500px;
+
+   
+}
+
+main{
+    
+    background-color: var(--cor1);
+    text-align: justify;
+    margin-top:-26px;
+    margin-bottom: -26px;
+    /*box-shadow: 5px 5px 10px black; Comando faz sombreamento no bloco*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main article{
+    background-color: var(--cor6);
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+main h2{
+    font:normal bold 2em idroid;
+    color:green;   
+}
+
+main h3{
+    background-image: linear-gradient(to right,var(--cor1),transparent);   
+    margin: 8px;
+    font-family: idroid;
+    font-size: 1.3em;
+    font-weight: bolder;
+    /*color:green,*/
+    color: var(--cor4);
+}
+
+div.video{
+    background-color: var(--cor6);
+    padding-top:0px;
+    padding-bottom: 60%;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+    position:relative;
+    
+}
+
+div.video > iframe{
+    position:absolute;
+    top:5%;
+    left:5%;
+    width:95%;
+    height:90%;
+}
+
+box-inline{color:var(--cor6);
+    text-align:right;
+   /* margin-left:50px;Deslocar os parágrafos um pouco para a direita*/
+}
+
+
+/*a::after{
+    content: url(imagens/links-icon2.png);
+    
+}*/
+
+p{    
+    margin-left:10px;
+    margin-top:20px;
+    margin-right:10px;
+    margin-bottom: 20px;
+    text-indent: 1.5em;/*tabula a primeira linha de cada paragrafo*/
+    line-height: 2em;/*Aumenta o espaçamento entre linhas*/
+}
+
+h2{
+    margin-left: 10px;
+}
+/*O comando abaixo,torna todas as imagens responsivas*/
+img{
+    width: 100%;
+}
+picture{
+    align:center;
+}
+
+div{   
+    background-color: rgb(139, 239, 139);
+    margin-top: -16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cor{
+    color: var(--cor3);
+    font-weight: bolder;
+}
+
+.blank{
+    height: 20px;
+}
+
+video{
+    margin-left: -24px;
+}
+
+iframe{
+    margin-left: -24px;
+}
+.prev{
+    margin-right: auto;
+}
+#link{
+    color: var(--cor3);
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+aside{
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: white;
+}
+
+.par{
+    font-size:23px;
+    margin-top:0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 5px 10px 5px 0px;
+}
+
+aside div{
+    margin-left: 0px;
+    margin-top:-20px;
+    margin-right: 0px;
+    text-align:justify 10px;
+}
+
+ul{
+    columns:2;
+    list-style-position:inside; /*Este comando faz com que o conteúdo da lista fique dentro do bloco*/
+    list-style-type: '\2714';/*Este comando muda o ícone do ítem da lista conforme o código do ícone da imagem baixada do site emojipedia.org*/
+                            /*Obs.: Para que o comando funcione é preciso colocar a barra ao contrário "\" para que o comando tenha efeito*/
+}
+
+footer{
+    background-color: var(--cor5);
+    color:var(--cor6);    
+    margin: 0px;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+#astro{
+    margin-left:-25px;
+    margin-right:25px;
+}

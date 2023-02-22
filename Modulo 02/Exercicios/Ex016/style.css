@@ -1,0 +1,39 @@
+@charset "utf8";
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 2px rgba(160, 40, 40, 0.486);
+    /*Comando que projeta o texto para baixo(1o px), para o lado direito (2o px),
+    faz sombreamento (3o px), o comando A após RGB altera o brilho*/
+    color:brown;
+    text-align: center;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#db9456;
+}
+
+body{
+    background-image: linear-gradient(to right,#D8B08C,#f5a961); 
+}
+
+main{
+    background-color: white;
+    margin: auto;/*Comando centraliza a tag MAIN na tela*/
+    width: 700px;/* comando que limita o tamanho direito contido dentro da tag MAIN*/
+    padding: 30px;/*Comando que cria uma requadro para a tag MAIN*/
+    border-radius: 50px; /*Comando que deixa os cantos arredondados*/
+}
+
+h3{
+    background-color: #d3a781;
+    width:760px;
+    padding: 25px;
+    margin: auto;
+    border-radius: 50px;
+}
+
+p{
+    text-align:justify
+}
